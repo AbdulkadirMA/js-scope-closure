@@ -22,8 +22,8 @@ function counterMaker() {
     count++;
   }
 }
-
-const counter1 = counterMaker();
+const counter1 = counterMaker(count);
+//Counter1 is a function that nested another function, it returns another function that doing something.
 
 // counter2 code
 let count = 0;
@@ -31,6 +31,9 @@ let count = 0;
 function counter2() {
   return count++;
 }
+/* Counter2 is function that returns a variable that declared outside of the function. it also is hoisting because we
+declared and Initialized  the  variable  before that we create the function */
+
 
 
 /******************************************************************************\
@@ -41,19 +44,22 @@ function counter2() {
 /* Inside the motivation function create another function called message that
 will return 'You're doing awesome, keep it up firstname lastname.' */
 
-function motivation(firstname, lastname) {
-
-  var welcomeText = 'You\'re doing awesome, keep it up ';
-
-  // code message function here.
-
-
-  //Uncommment this to return the value of your invoked message function
-  //return message();
-
-}
-
-motivation('Mohamed', 'Ali'); // 'You're doing awesome keep it up Mohamed Ali.
+function motivation(personName) {
+  const firstName="Abdulkadir"
+  const lastName="Mohamed"
+    var welcomeText = 'You\'re doing awesome, keep it up ';
+  
+    function message(personTwo){
+      const fName="Mohamed"
+      const lName="Ali"
+      console.log(`${firstName} ${lastName} and ${fName} ${lName} ${welcomeText}`)
+    }
+  
+    message()
+  
+  }
+  motivation()
+  
 
 
 /******************************************************************************\
@@ -71,6 +77,9 @@ var secondLevelFriends = ["Mahad", "Farah", "Mohamed"];
 var allUsers = ["Ahmed", "Khadijo", "Farah", "Mahad", "Mohamed", "Bashir", "Ali"];
 
 function findPotentialFriends(existingFriends) {
+  for(i=0;i<friends.length;i++){
+    if allUsers
+  }
 
 }
 
@@ -101,11 +110,13 @@ to 5. What we need to do is console.log(i) so that it logs like so:
 function timeOutCounter() {
   for (var i = 0; i <= 5; i++) {
     setTimeout(function() {
-    	console.log(i)
+    	
 	}, i * 1000)
+  console.log(i)
   }
+  
 }
-timeOutCounter();
+timeOutCounter(setTimeout);
 
 
 /******************************************************************************\
